@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head") %>
+  <head>
+    <style>
+      .page-404 h1 {
+        font-size: 60px;
+      }
+      
+      .page-404 li{
+        display: inline-block;
+        list-style: none;
+        margin: 50px 20px 0 20px;
+        font-size: 20px;
+      }
+
+      .page-404 ul li a {
+        color: #fff;
+        text-decoration-color: #fff;
+        transition: 0.7s ease;
+      }
+
+      .page-404 ul li a:hover {
+        font-size: 30px;
+        text-decoration-color: rgb(14, 11, 220);
+        transform: scale(1.7);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="page-404">
+        <h1>404</h1>
+        <h2>
+          sorry. it looks like this page is deleted <br />
+          or removed or maybe ther is no page with this name <br />
+          you can go to one of our main pages
+          <i class="fa-solid fa-down-long"></i>
+        </h2>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/about">About me</a></li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>
