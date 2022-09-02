@@ -109,7 +109,8 @@ section {
   backdrop-filter: blur(8.2px);
   -webkit-backdrop-filter: blur(8.2px);
   align-items: center;
-  padding: 100px 50px;
+  padding: 50px 50px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .main .main-title h2 {
@@ -124,7 +125,7 @@ section {
 }
 
 .main .social-media a {
-  font-size: 5em;
+  font-size: 3em;
   text-decoration: none;
   margin: 30px;
   color: #fff;
@@ -201,6 +202,10 @@ section {
 .services .container .card .content h3 {
   font-size: 3em;
   color: #fff;
+}
+
+.services .container .card .content p {
+  font-size: 1.2em;
 }
 
 .services .container .card .content a {
@@ -289,7 +294,7 @@ section {
   padding: 25px;
   margin: 30px;
   background: rgba(0, 0, 0, 0.154);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
 }
@@ -305,6 +310,24 @@ section {
 
 .projects .container .card .content p {
   font-size: 1.4em;
+}
+
+.projects .container .card .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  margin-top: 15px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.projects .container .card .content a:hover {
+  transform: scale(0.8);
 }
 
 .projects .container .card .content .icon {
@@ -340,6 +363,9 @@ section {
   margin: 30px;
   border-radius: 12px;
   transition: 0.7s ease;
+  width: 50%;
+  max-width: 90%;
+  max-height: 100%;
 }
 
 .about .card::before,
@@ -352,8 +378,8 @@ section {
   height: 110%;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(15px);
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
   z-index: 2;
 }
 
@@ -385,8 +411,8 @@ section {
 
 .about .profile-image img {
   z-index: 1;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   position: relative;
   margin-top: -75px;
   display: block;
@@ -410,7 +436,7 @@ section {
 }
 
 .about .card-content p {
-  font-size: 1.8em;
+  font-size: 1.6em;
   text-align: justify;
   padding: 0 20px 5px 20px;
   color: #fff;
@@ -418,15 +444,17 @@ section {
 
 .about .icons {
   text-align: center;
-  padding-top: 5px;
-  padding-bottom: 30px;
+  padding-right: 5px;
+  /* padding-bottom: 30px; */
 }
 
 .about .icons a {
   text-decoration: none;
   font-size: 3em;
   color: #0ABDE3;
-  padding: 0 14px;
+  padding-top: 15px;
+  padding: 0 35px;
+  margin-top: 35px;
   transition-duration: 0.4s;
   transition-property: transform;
 }
@@ -461,14 +489,15 @@ section {
   padding: 25px;
   margin: 30px;
   background: rgba(0, 0, 0, 0.154);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(15px);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);  backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
 }
 
 .skills .container .card p {
   margin-bottom: 35px;
+  font-size: 2em;
 }
+
 
 .skills .container .card .container {
   width: 100%;
@@ -479,6 +508,8 @@ section {
   padding-top: 10px;
   padding-bottom: 10px;
   color: white;
+  border-radius: 12px;
+  font-size: 1.2em;
 }
 
 .skills .html {
@@ -496,9 +527,20 @@ section {
   background-color: #f44336;
   animation: jsmove 4s;
 }
-.skills .php {
-  width: 60%;
-  background-color: #808080;
+.skills .nodejs {
+  width: 45%;
+  animation: nodejsmove 4s;
+  background-color: #12e627;
+}
+.skills .vscode {
+  width: 100%;
+  animation: vscode 4s;
+  background-color: #0ABDE3;
+}
+.skills .mongodb {
+  width: 76%;
+  animation: mongodb 4s;
+  background-color: #0ae390;
 }
 
 @keyframes htmlmove {
@@ -510,6 +552,7 @@ section {
     width: 90%;
   }
 }
+
 @keyframes cssmove {
   from {
     width: 0%;
@@ -529,6 +572,35 @@ section {
   }
 }
 
+@keyframes nodejsmove {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 45%;
+  }
+}
+
+@keyframes vscode {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes mongodb {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 76%;
+  }
+}
 
 @media (max-width: 1023px) {
   .header {
@@ -560,10 +632,31 @@ section {
     font-size: 1.6em;
   }
 
+  .main .social-media a {
+    font-size: 4em;
+  }
+
+
+
+}
+
+@media (max-width: 641px) {
+  body {
+    font-size: 12px;
+  }
+
+  .main .main-content h2 {
+    font-size: 0.8em;
+  }
+
+  .main .main-content h3 {
+    font-size: 1.4em;
+  }
+
   .services .container .card {
     position: relative;
-    width: 31.25em;
-    height: 400px;
+    width: 80%;
+    /* height: 500px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -573,23 +666,13 @@ section {
     transition: 0.7s ease;
   }
 
-  .services .container .card .content h2 {
-    position: absolute;
-    top: -80px;
-    right: 30px;
-    font-size: 5.5em;
-    color: rgba(255, 255, 255, 0.5);
-    pointer-events: none;
-    margin-top: 15px;
-  }
-
   .services .container .card .content h3 {
     font-size: 3.6em;
     color: #fff;
   }
 
   .services .container .card .content p {
-    font-size: 2.8em;
+    font-size: 1.9em;
   }
 
   .services .container .card .content a {
@@ -611,23 +694,48 @@ section {
     flex-direction: column;
     align-items: center;
   }
-  .services .container .card .content p {
-    font-size: 1.5em;
+
+  .projects .container .card .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 25px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 2.6em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
   }
 
-}
-
-@media (max-width: 641px) {
-  body {
-    font-size: 12px;
+  .about .card {
+    width: 90%;
   }
 
-  .main .main-content h2 {
-    font-size: 0.8em;
+  .about .card-content h3 {
+    font-size: 4.8em;
   }
 
-  .main .main-content h3 {
-    font-size: 1.4em;
+  .about .card-content p {
+    font-size: 2.4em;
+  }
+
+  .about .icons a {
+    font-size: 5em;
+  }
+
+  .projects .card {
+    width: 80%;
+  }
+
+  .skills .container .card {
+    width: 80%;
+  }
+
+  .skills .skill {
+    font-size: 2.3em;
   }
 }
 
