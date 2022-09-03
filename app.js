@@ -1,3 +1,5 @@
+// By Mark Maher
+
 // App Conterol Panel
 // requires
 const express = require("express");
@@ -27,10 +29,10 @@ liveReloadServer.server.once("connection", () => {
     liveReloadServer.refresh("/");
   }, 100);
 });
-/*
+
 // DATABASE
 const dbname = "Personal"; // Databse Name
-const db = `mongodb+srv://mark:marco@marcodb.awz9vmu.mongodb.net/${dbname}?retryWrites=true&w=majority`; // Database link
+const db = `###/${dbname}?retryWrites=true&w=majority`; // Database link
 mongoose
   .connect(db)
   .then((result) => {
@@ -39,7 +41,7 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-  */
+  
 
 // App Pages
 // Home
@@ -62,3 +64,5 @@ app.listen(port, () => {
     `Example app listening on port ${port} \nLink : http://localhost:${port}`
   );
 });
+
+// By Mark Maher
