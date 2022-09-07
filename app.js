@@ -5,11 +5,6 @@ const mongoose = require("mongoose");
 const livereload = require("livereload");
 const connectLivereload = require("connect-livereload");
 const path = require("path");
-const Skills = require("./models/SkillsSchema");
-const {
-  isAbsolute
-} = require("path");
-
 
 // express sittings
 const app = express();
@@ -37,24 +32,22 @@ liveReloadServer.server.once("connection", () => {
 const dbname = "Personal"; // Databse Name
 const db = `mongodb+srv://mark:marco@marcodb.awz9vmu.mongodb.net/${dbname}?retryWrites=true&w=majority`; // Database link
 mongoose
-.connect(db)
-.then((result) => {
-  console.log(`DataBase Connected to : ${dbname}`);
-})
-.catch((err) => {
-  console.log(err);
-});
-
+  .connect(db)
+  .then((result) => {
+    console.log(`DataBase Connected to : ${dbname}`);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+  
 
 // App Pages
 // Home
 app.get("/", (req, res) => {
-      res.render("index", {
-      mytitle: "Mark Maher Ewida",
-    });
+  res.render("index", {
+    mytitle: "Mark Maher"
+  });
 });
-
-
 
 // 404
 app.use((req, res) => {
@@ -64,8 +57,8 @@ app.use((req, res) => {
 });
 
 // app Starter
-app.listen(process.env.PORT || port, () => {
+app.listen(port, () => {
   console.log(
-    `Example app listening on port ${process.env.PORT || port} \nLink : http://localhost:${process.env.PORT || port}`
+    `Example app listening on port ${port} \nLink : http://localhost:${port}`
   );
 });
